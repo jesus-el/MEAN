@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'));//mostar la peticiones get / 404 8.7 ms - 139
 app.use(express.json());
 // Routes
-app.use(require('./routes/employee.routes'));
+app.use('/api/employees',require('./routes/employee.routes'));
 // Starting the Server
 app.listen(app.get('port'), () => { //app.listen(3000, () => {
     console.log('Serve on port ', app.get('port')); //  console.log('Serve on port 3000'); se cambio para que saliera el numero de puerto automaticamente 
