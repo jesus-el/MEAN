@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col s5">
+            <div class="card">
+                <div class="card-content">
+                    <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeServise.selectedEmployee.name" placeholder="Enter you name">
+
+                            </div>
+                            <div class="input-field col s12">
+                                    <input type="text" name="position" #position="ngModel" [(ngModel)]="employeeServise.selectedEmployee.position" placeholder="Enter you Position">
+    
+                                </div>
+                                <div class="input-field col s12">
+                                        <input type="text" name="office" #office="ngModel" [(ngModel)]="employeeServise.selectedEmployee.office" placeholder="Enter you Office">
+        
+                                    </div>
+                                    <div class="input-field col s12">
+                                            <input type="text" name="salary" #salary="ngModel" [(ngModel)]="employeeServise.selectedEmployee.salary" placeholder="Enter you Salary">
+            
+                                        </div>
+                                    <div class="card-action">
+                                        <div class="input-field col s12">
+                                            <button class="btn right" style="margin-right: 2px;">Save</button>
+                                            <button class="btn " (click)="resetForm(employeeForm)" >Clean</button>
+                                        </div>
+                                    </div>    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col s7">
+
+        </div>
+    </div>
+</div>
